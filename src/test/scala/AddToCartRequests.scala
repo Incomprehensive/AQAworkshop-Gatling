@@ -7,10 +7,10 @@ import io.gatling.http.Predef._
 
 object AddToCartRequests {
 
-  val requestName = EnvConfig.env + "-Search-"
+  val requestName = EnvConfig.env + "-Add-To-cart-"
 
   // Get Request
-  val getAddToCart = http(requestName + "index")
+  val getAddToCart = http(requestName + "dev")
     .get("cart.php?add=55048&addOffer=888")
     .check(status.is(200))
 
