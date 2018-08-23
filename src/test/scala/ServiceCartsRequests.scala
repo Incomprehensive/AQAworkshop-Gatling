@@ -6,7 +6,7 @@ import io.gatling.http.Predef._
   */
 object ServiceCartsRequests {
 
-  val requestName = EnvConfig.cartsAPI + "-Service-Carts-API-"
+  val requestName = EnvConfig.env + "-Service-Carts-API-"
 
   val postNewCartId = http(requestName + "carts")
     .post("v1/carts")

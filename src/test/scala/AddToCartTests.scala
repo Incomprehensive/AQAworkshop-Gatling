@@ -27,13 +27,13 @@ class AddToCartTests extends Simulation{
     List[PopulationBuilder] = List(
     addTemplateAndOnCartOffer.inject(constantUsersPerSec(
       EnvConfig().getInt("loading.usersCount")) during(
-      EnvConfig().getInt("loading.duration") seconds)).protocols(httpConf)
+      EnvConfig().getInt("loading.duration") seconds)).protocols(httpConf),
     addTemplateTypesToCart.inject(constantUsersPerSec(
       EnvConfig().getInt("loading.usersCount")) during(
       EnvConfig().getInt("loading.duration") seconds)).protocols(httpConf),
     addOnCartOffertToCart.inject(constantUsersPerSec(
       EnvConfig().getInt("loading.usersCount")) during(
-      EnvConfig().getInt("loading.duration") seconds)).protocols(httpConf),
+      EnvConfig().getInt("loading.duration") seconds)).protocols(httpConf)
   )
 
   setUp(
